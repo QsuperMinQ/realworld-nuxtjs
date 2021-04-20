@@ -1,0 +1,51 @@
+[
+  {
+    "path": "/",
+    "component": "/Users/limin.shen/work/realworld-nuxtjs/pages/layout",
+    "children": [
+      {
+        "path": "",
+        "name": "home",
+        "component": "/Users/limin.shen/work/realworld-nuxtjs/pages/home",
+        "_name": "_6799a70e"
+      },
+      {
+        "path": "/login",
+        "name": "login",
+        "component": "/Users/limin.shen/work/realworld-nuxtjs/pages/login",
+        "_name": "_e858f9cc"
+      },
+      {
+        "path": "/register",
+        "name": "register",
+        "component": "/Users/limin.shen/work/realworld-nuxtjs/pages/login",
+        "_name": "_e858f9cc"
+      },
+      {
+        "path": "/profile/:username",
+        "name": "profile",
+        "component": "/Users/limin.shen/work/realworld-nuxtjs/pages/profile",
+        "_name": "_83b415cc"
+      },
+      {
+        "path": "/setting",
+        "name": "setting",
+        "component": "/Users/limin.shen/work/realworld-nuxtjs/pages/setting",
+        "_name": "_46f679c1"
+      },
+      {
+        "path": "/editor",
+        "name": "editor",
+        "component": "/Users/limin.shen/work/realworld-nuxtjs/pages/editor",
+        "_name": "_3bddf848"
+      },
+      {
+        "path": "/article/:slug",
+        "name": "article",
+        "component": "/Users/limin.shen/work/realworld-nuxtjs/pages/article",
+        "_name": "_b61f8f32"
+      }
+    ],
+    "_name": "_244044ce"
+  }
+]
