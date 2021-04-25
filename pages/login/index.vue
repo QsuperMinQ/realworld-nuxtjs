@@ -23,13 +23,13 @@
           <form @submit.prevent="onSubmit">
 
             <fieldset class="form-group" v-if="!isLogin">
-              <input  v-model="user.username" class="form-control form-control-lg" type="text" placeholder="昵称" required>
+              <input v-model="user.username" class="form-control form-control-lg" type="text" placeholder="昵称" required>
             </fieldset>
             <fieldset class="form-group">
-              <input  v-model="user.email" class="form-control form-control-lg" type="text" placeholder="邮箱" required>
+              <input v-model="user.email" class="form-control form-control-lg" type="text" placeholder="邮箱" required>
             </fieldset>
             <fieldset class="form-group">
-              <input  v-model="user.password" class="form-control form-control-lg" type="password" placeholder="密码" required>
+              <input v-model="user.password" class="form-control form-control-lg" type="password" placeholder="密码" required>
             </fieldset>
             <button class="btn btn-lg btn-primary pull-xs-right">
               {{ isLogin ? '登录' : '注册' }}
@@ -59,9 +59,12 @@ export default {
   data () {
     return {
       user: {
-        username: 'happy-123456789',
-        email: '111@123.com',
-        password: '123456789'
+        // username: 'happy-123456789',
+        // email: '111@123.com',
+        // password: '123456789'
+        username: '',
+        email: '',
+        password: ''
       },
       errors: {}
     }

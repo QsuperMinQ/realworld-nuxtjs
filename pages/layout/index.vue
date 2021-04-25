@@ -7,7 +7,7 @@
             <ul class="nav navbar-nav pull-xs-right">
             <li class="nav-item">
                 <!-- Add "active" class when you're on that page" -->
-                <nuxt-link class="nav-link active" to="/">主页</nuxt-link>
+                <nuxt-link class="nav-link" to="/" exact>主页</nuxt-link>
             </li>
 
             <template v-if="user">
