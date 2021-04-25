@@ -62,6 +62,8 @@ export default {
         // username: 'happy-123456789',
         // email: '111@123.com',
         // password: '123456789'
+        // https://www.google.com/imgres?imgurl=https%3A%2F%2Ftwgreatdaily.com%2Fimages%2Felastic%2F4_H%2F4_HheXABgx9BqZZI6Aax.jpg&imgrefurl=https%3A%2F%2Ftwgreatdaily.com%2FT5WxTHABjYh_GJGVfwi8.html&tbnid=w80OZDXzyrwz5M&vet=12ahUKEwiWktG51o7wAhVM7JQKHYMcCjMQMygjegUIARD_AQ..i&docid=Dkcgc8SR6L8DGM&w=640&h=640&q=%E5%8D%A1%E9%80%9A%E5%A4%B4%E5%83%8F&ved=2ahUKEwiWktG51o7wAhVM7JQKHYMcCjMQMygjegUIARD_AQ
+        // What u believe makes who u are!
         username: '',
         email: '',
         password: ''
@@ -102,3 +104,4 @@ export default {
 <style>
 
 </style>
+

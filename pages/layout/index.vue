@@ -21,6 +21,15 @@
                     <i class="ion-gear-a"></i>&nbsp;设置
                     </nuxt-link>
                 </li>
+                <li class="nav-item">
+                <nuxt-link class="nav-link" to="/profile/happy-123456">
+                    <img
+                    class="user-pic"
+                    :src="user.image"
+                    >
+                    {{ user.username }}
+                </nuxt-link>
+                </li>
             </template>
 
 

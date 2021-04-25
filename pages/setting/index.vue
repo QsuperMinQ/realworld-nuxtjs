@@ -9,19 +9,19 @@
             <form @submit.prevent="onSubmit">
             <fieldset>
                 <fieldset class="form-group">
-                    <input class="form-control" type="text" placeholder="URL of profile picture">
+                    <input v-model = 'userInfo.image' class="form-control" type="text" placeholder="URL of profile picture">
                 </fieldset>
                 <fieldset class="form-group">
-                    <input text = 'user.username' class="form-control form-control-lg" type="text" placeholder="Your Name">
+                    <input v-model = 'userInfo.username' class="form-control form-control-lg" type="text" placeholder="Your Name">
                 </fieldset>
                 <fieldset class="form-group">
-                    <textarea class="form-control form-control-lg" rows="8" placeholder="Short bio about you"></textarea>
+                    <textarea v-model = 'userInfo.bio' class="form-control form-control-lg" rows="8" placeholder="Short bio about you"></textarea>
                 </fieldset>
                 <fieldset class="form-group">
-                    <input class="form-control form-control-lg" type="text" placeholder="Email">
+                    <input v-model = 'userInfo.email' class="form-control form-control-lg" type="text" placeholder="Email">
                 </fieldset>
                 <fieldset class="form-group">
-                    <input class="form-control form-control-lg" type="password" placeholder="Password">
+                    <input v-model = 'userInfo.password' class="form-control form-control-lg" type="password" placeholder="Password">
                 </fieldset>
                 <button class="btn btn-lg btn-primary pull-xs-right">
                     Update Settings
@@ -38,7 +38,8 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from 'vuex';
+import { update } from '@/api/user';
 
 export default {
     name: 'SettingPage',
@@ -48,10 +49,10 @@ export default {
     data () {
         return {
             userInfo: {
-                pic: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Ftwgreatdaily.com%2Fimages%2Felastic%2F4_H%2F4_HheXABgx9BqZZI6Aax.jpg&imgrefurl=https%3A%2F%2Ftwgreatdaily.com%2FT5WxTHABjYh_GJGVfwi8.html&tbnid=w80OZDXzyrwz5M&vet=12ahUKEwiWktG51o7wAhVM7JQKHYMcCjMQMygjegUIARD_AQ..i&docid=Dkcgc8SR6L8DGM&w=640&h=640&q=%E5%8D%A1%E9%80%9A%E5%A4%B4%E5%83%8F&ved=2ahUKEwiWktG51o7wAhVM7JQKHYMcCjMQMygjegUIARD_AQ',
+                image: 'https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D450%2C600/sign=a587b23df11f3a295a9dddcaac159007/500fd9f9d72a60590cfef2f92934349b023bba62.jpg',
                 username: '',
-                // email: user.email,
-                // password: user.password,
+                email: '',
+                password: '',
                 bio: ''
             }
         }
@@ -64,17 +65,18 @@ export default {
             this.$router.push('/')
         },
         async onSubmit() {
+            console.log('this.userInfo', this.userInfo)
             
             try {
-                await createArticle({
-                    article: this.article
+                await update({
+                    user: this.userInfo
                 })
 
                 // 跳转到首页
                 this.$router.push('/')
 
             } catch (error) {
-                this.errors = err.response.data.errors
+                this.errors = error.response.data.errors
             }
         
         }
